@@ -1,10 +1,6 @@
 <?php
-define ("MYSQL_SERVER", "localhost");
-define ("MYSQL_USER", 'root');
-define ("MYSQL_PW", 'manquo64');
-define ('EVE_FUZZDUMP', 'https://www.fuzzwork.co.uk/dump/');
-define ("EVE_SDE", file_get_contents('/root/.sdename'));
-define ('n', "\n");
+include "credentials.php";
+include "definitions.php";
 
 #trim underscores, and only underscores, from a string
 function trim_($str)
