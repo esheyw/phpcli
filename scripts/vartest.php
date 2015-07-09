@@ -2,10 +2,11 @@
 <?php
 class test
 {
-    private $TESTVAR = 'NANITES';
-    function thash($str, $salt = $this->TESTVAR)
+    const TESTVAR = 'NANITES';
+    function thash($str, $salt = self::TESTVAR)
     {
         echo $salt.n;
+
         return sha1($salt.$str);
     }
 }

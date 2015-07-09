@@ -7,8 +7,7 @@ function scryhash($str, $salt)
     return scryptHash::hash($str, $salt);
 }
 
-$APIKEY     = 523060;
-$APIVCODE   = 'sh1eX7DYU7zxPNIKvrfzGsFghbu6WwE6GjJdHttEQZ6XYBdDMqNEqICFJpvZnBje';
+
 
 $r = new Redis();
 $r->connect('localhost');
