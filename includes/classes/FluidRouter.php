@@ -7,7 +7,7 @@ interface FluidRouterCacheEngine {
     public function setSalt ($salt);
 }
 
-class_exists('SC',false) ?: class_alias('SanityCheck', 'SC'); #load and alias the sanity check class, if it hasn't been done already
+loadsc(); #load and alias the sanity check class, if it hasn't been done already
 
 class FluidRouter {
     protected $cache;

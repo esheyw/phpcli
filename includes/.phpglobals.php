@@ -7,6 +7,13 @@ function esheyw_autoload ($name) {
 }
 
 spl_autoload_register('esheyw_autoload');
+
+class_alias('SanityCheck', 'SC'); #load and alias the sanity check class
+
+function loadsc() {
+    if (!class_exists('SC',false)) class_alias('SanityCheck', 'SC');
+}
+
 #trim underscores, and only underscores, from a string
 function trim_($str)
 {
@@ -39,4 +46,8 @@ if (extension_loaded('scrypt'))
 {
     include_once 'scryptHash.php';
 }
+
+loadsc();
+
+
 ?>
