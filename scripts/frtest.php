@@ -13,11 +13,13 @@ $r = new Redis();
 $r->connect('localhost');
 
 $frc = new FluidRouterRedisCache($r);
-#$frc->setHashFunc('scryhash');
-$fr = new FluidRouter($APIKEY, $APIVCODE, $frc);
+$frc->setHashFunc('scryhash');
+$t  = $_EVEAPI['Thallius'];
+$fr = new FluidRouter($t['keyID'], $t['vCode'], $frc);
 
 #
-#echo $fr->hash('hello world').n;
-$chars = $fr->query('account/Characters');
+echo $fr->setUserAgent('TEST').n;
+#echo $fr->setUserAgent(42).n;
+#$chars = $fr->query('account/Characters');
 #var_dump($chars);
 ?>

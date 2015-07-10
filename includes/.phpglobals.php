@@ -1,7 +1,12 @@
 <?php
 require_once "credentials.php";
 require_once "definitions.php";
-$_HANDLES = array();
+
+function esheyw_autoload ($name) {
+    require_once $name.'.php';
+}
+
+spl_autoload_register('esheyw_autoload');
 #trim underscores, and only underscores, from a string
 function trim_($str)
 {
